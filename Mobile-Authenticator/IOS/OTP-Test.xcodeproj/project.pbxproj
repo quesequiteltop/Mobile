@@ -45,6 +45,7 @@
 		BF554B601B14F64000FB2EEE /* OTPGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BF554B5B1B14F64000FB2EEE /* OTPGenerator.m */; };
 		BF554B611B14F64000FB2EEE /* TOTPGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BF554B5D1B14F64000FB2EEE /* TOTPGenerator.m */; };
 		BF554B621B14F64000FB2EEE /* MF_Base32Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF554B5F1B14F64000FB2EEE /* MF_Base32Additions.m */; };
+		BFAA1BC81B31FA1F0040B13F /* copiar.png in Resources */ = {isa = PBXBuildFile; fileRef = BFAA1BC71B31FA1F0040B13F /* copiar.png */; };
 		BFB8493C1B28C4B700214B7B /* produban-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB8493B1B28C4B700214B7B /* produban-logo.png */; };
 		BFB849401B28D7BB00214B7B /* logo-60.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB8493D1B28D7BB00214B7B /* logo-60.png */; };
 		BFB849411B28D7BB00214B7B /* logo-40.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB8493E1B28D7BB00214B7B /* logo-40.png */; };
@@ -125,6 +126,7 @@
 		BF554B5D1B14F64000FB2EEE /* TOTPGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOTPGenerator.m; sourceTree = "<group>"; };
 		BF554B5E1B14F64000FB2EEE /* MF_Base32Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MF_Base32Additions.h; sourceTree = "<group>"; };
 		BF554B5F1B14F64000FB2EEE /* MF_Base32Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MF_Base32Additions.m; sourceTree = "<group>"; };
+		BFAA1BC71B31FA1F0040B13F /* copiar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = copiar.png; sourceTree = "<group>"; };
 		BFB8493B1B28C4B700214B7B /* produban-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "produban-logo.png"; sourceTree = "<group>"; };
 		BFB8493D1B28D7BB00214B7B /* logo-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-60.png"; sourceTree = "<group>"; };
 		BFB8493E1B28D7BB00214B7B /* logo-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-40.png"; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 		BF554B251B14F29E00FB2EEE /* OTP-Test */ = {
 			isa = PBXGroup;
 			children = (
+				BFAA1BC71B31FA1F0040B13F /* copiar.png */,
 				BF17FB8E1B2B48D6007D19C2 /* launch_retina.png */,
 				BF17FB8F1B2B48D6007D19C2 /* launch_iphone.png */,
 				BFB849431B28DA0400214B7B /* logo-120.png */,
@@ -431,6 +434,7 @@
 				BFB849401B28D7BB00214B7B /* logo-60.png in Resources */,
 				BF554B2A1B14F29E00FB2EEE /* InfoPlist.strings in Resources */,
 				BF554B571B14F2DE00FB2EEE /* OtpViewController.xib in Resources */,
+				BFAA1BC81B31FA1F0040B13F /* copiar.png in Resources */,
 				BF554B591B14F3C500FB2EEE /* bg.png in Resources */,
 				BFB849471B28DA0400214B7B /* logo-120.png in Resources */,
 				BF1B3BDB1B21EABE000BED6B /* produban-logo-.png in Resources */,
@@ -597,7 +601,7 @@
 				GCC_PREFIX_HEADER = "OTP-Test/OTP-Test-Prefix.pch";
 				INFOPLIST_FILE = "OTP-Test/OTP-Test-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1eec9375-996d-4429-9677-7017565a9790";
+				PROVISIONING_PROFILE = "a00c6f13-36e2-428e-ab32-3819a451ee1c";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -610,7 +614,7 @@
 				GCC_PREFIX_HEADER = "OTP-Test/OTP-Test-Prefix.pch";
 				INFOPLIST_FILE = "OTP-Test/OTP-Test-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1eec9375-996d-4429-9677-7017565a9790";
+				PROVISIONING_PROFILE = "a00c6f13-36e2-428e-ab32-3819a451ee1c";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
