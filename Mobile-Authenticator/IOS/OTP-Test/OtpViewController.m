@@ -151,14 +151,26 @@
 -(void)responseQrcodeData:(NSString *)data{
     
     NSLog(@"%@",data);
-    NSURL *url = [NSURL URLWithString:data];
-    NSString *var = [url query];
-    NSArray * array = [var componentsSeparatedByString:@"="];
-    NSString * secret = array[1];
+    //NSData *uri = data;
+
+    NSString * secret = [[self otpURItoDictionary:data]objectForKey:@"secret"];
 
     [self saveSecret:secret];
     
 
+}
+
+-(NSDictionary *) otpURItoDictionary:(NSString *)otpUrl{
+    NSMutableDictionary * dict = [[NSMutableDictionary alloc]init];
+    NSURL *url = [NSURL URLWithString:otpUrl];
+    NSString *var = [url query];
+    NSArray * array =[var componentsSeparatedByString:@"&"];
+    for (NSString * dado in array) {
+        NSArray *partDado = [dado componentsSeparatedByString:@"="];
+        [dict setObject:partDado[1] forKey:partDado[0]];
+    }
+    
+    return dict;
 }
 
 -(void) saveSecret:(NSString *)secret{
