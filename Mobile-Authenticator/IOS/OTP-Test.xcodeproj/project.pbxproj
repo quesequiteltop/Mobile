@@ -24,6 +24,10 @@
 		BF43D2821B261C9500D4B1AC /* OTPGen.m in Sources */ = {isa = PBXBuildFile; fileRef = BF43D2811B261C9500D4B1AC /* OTPGen.m */; };
 		BF466A591B1646E60004DCFC /* QrCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF466A571B1646E60004DCFC /* QrCodeViewController.m */; };
 		BF466A5A1B1646E60004DCFC /* QrCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF466A581B1646E60004DCFC /* QrCodeViewController.xib */; };
+		BF4D96C61B33253F00456B61 /* OTPTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4D96C41B33253F00456B61 /* OTPTableViewController.m */; };
+		BF4D96C71B33253F00456B61 /* OTPTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF4D96C51B33253F00456B61 /* OTPTableViewController.xib */; };
+		BF4D96CC1B3326E700456B61 /* OTPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4D96CA1B3326E700456B61 /* OTPTableViewCell.m */; };
+		BF4D96CD1B3326E700456B61 /* OTPTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF4D96CB1B3326E700456B61 /* OTPTableViewCell.xib */; };
 		BF554B1E1B14F29E00FB2EEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF554B1D1B14F29E00FB2EEE /* Foundation.framework */; };
 		BF554B201B14F29E00FB2EEE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF554B1F1B14F29E00FB2EEE /* CoreGraphics.framework */; };
 		BF554B221B14F29E00FB2EEE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF554B211B14F29E00FB2EEE /* UIKit.framework */; };
@@ -98,6 +102,12 @@
 		BF466A571B1646E60004DCFC /* QrCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QrCodeViewController.m; sourceTree = "<group>"; };
 		BF466A581B1646E60004DCFC /* QrCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QrCodeViewController.xib; sourceTree = "<group>"; };
 		BF466A5B1B1649A10004DCFC /* QrCodeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QrCodeDelegate.h; sourceTree = "<group>"; };
+		BF4D96C31B33253F00456B61 /* OTPTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OTPTableViewController.h; path = ../OTPTableViewController.h; sourceTree = "<group>"; };
+		BF4D96C41B33253F00456B61 /* OTPTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OTPTableViewController.m; path = ../OTPTableViewController.m; sourceTree = "<group>"; };
+		BF4D96C51B33253F00456B61 /* OTPTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OTPTableViewController.xib; path = ../OTPTableViewController.xib; sourceTree = "<group>"; };
+		BF4D96C91B3326E700456B61 /* OTPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPTableViewCell.h; sourceTree = "<group>"; };
+		BF4D96CA1B3326E700456B61 /* OTPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPTableViewCell.m; sourceTree = "<group>"; };
+		BF4D96CB1B3326E700456B61 /* OTPTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OTPTableViewCell.xib; sourceTree = "<group>"; };
 		BF554B1A1B14F29E00FB2EEE /* OTP-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OTP-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF554B1D1B14F29E00FB2EEE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BF554B1F1B14F29E00FB2EEE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -116,9 +126,9 @@
 		BF554B441B14F29E00FB2EEE /* OTP-TestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OTP-TestTests-Info.plist"; sourceTree = "<group>"; };
 		BF554B461B14F29E00FB2EEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BF554B481B14F29E00FB2EEE /* OTP_TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTP_TestTests.m; sourceTree = "<group>"; };
-		BF554B531B14F2DE00FB2EEE /* OtpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtpViewController.h; sourceTree = "<group>"; };
-		BF554B541B14F2DE00FB2EEE /* OtpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtpViewController.m; sourceTree = "<group>"; };
-		BF554B551B14F2DE00FB2EEE /* OtpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtpViewController.xib; sourceTree = "<group>"; };
+		BF554B531B14F2DE00FB2EEE /* OtpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OtpViewController.h; path = "OTP-Test/OtpViewController.h"; sourceTree = "<group>"; };
+		BF554B541B14F2DE00FB2EEE /* OtpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OtpViewController.m; path = "OTP-Test/OtpViewController.m"; sourceTree = "<group>"; };
+		BF554B551B14F2DE00FB2EEE /* OtpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OtpViewController.xib; path = "OTP-Test/OtpViewController.xib"; sourceTree = "<group>"; };
 		BF554B581B14F3C500FB2EEE /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		BF554B5A1B14F64000FB2EEE /* OTPGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPGenerator.h; sourceTree = "<group>"; };
 		BF554B5B1B14F64000FB2EEE /* OTPGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPGenerator.m; sourceTree = "<group>"; };
@@ -243,9 +253,30 @@
 			name = OTPGen;
 			sourceTree = "<group>";
 		};
+		BF4D96C21B32F07900456B61 /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				BF554B531B14F2DE00FB2EEE /* OtpViewController.h */,
+				BF554B541B14F2DE00FB2EEE /* OtpViewController.m */,
+				BF554B551B14F2DE00FB2EEE /* OtpViewController.xib */,
+			);
+			name = Old;
+			sourceTree = "<group>";
+		};
+		BF4D96C81B3326C300456B61 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				BF4D96C91B3326E700456B61 /* OTPTableViewCell.h */,
+				BF4D96CA1B3326E700456B61 /* OTPTableViewCell.m */,
+				BF4D96CB1B3326E700456B61 /* OTPTableViewCell.xib */,
+			);
+			name = cell;
+			sourceTree = "<group>";
+		};
 		BF554B111B14F29E00FB2EEE = {
 			isa = PBXGroup;
 			children = (
+				BF4D96C21B32F07900456B61 /* Old */,
 				BF554B251B14F29E00FB2EEE /* OTP-Test */,
 				BF554B421B14F29E00FB2EEE /* OTP-TestTests */,
 				BF554B1C1B14F29E00FB2EEE /* Frameworks */,
@@ -297,13 +328,13 @@
 				BF554B341B14F29E00FB2EEE /* Images.xcassets */,
 				BF554B311B14F29E00FB2EEE /* OTP_Test.xcdatamodeld */,
 				BF554B261B14F29E00FB2EEE /* Supporting Files */,
-				BF554B531B14F2DE00FB2EEE /* OtpViewController.h */,
-				BF554B541B14F2DE00FB2EEE /* OtpViewController.m */,
-				BF554B551B14F2DE00FB2EEE /* OtpViewController.xib */,
 				BF466A561B1646E60004DCFC /* QrCodeViewController.h */,
 				BF466A571B1646E60004DCFC /* QrCodeViewController.m */,
 				BF466A581B1646E60004DCFC /* QrCodeViewController.xib */,
 				BF466A5B1B1649A10004DCFC /* QrCodeDelegate.h */,
+				BF4D96C31B33253F00456B61 /* OTPTableViewController.h */,
+				BF4D96C41B33253F00456B61 /* OTPTableViewController.m */,
+				BF4D96C51B33253F00456B61 /* OTPTableViewController.xib */,
 			);
 			path = "OTP-Test";
 			sourceTree = "<group>";
@@ -340,6 +371,7 @@
 		BF554B521B14F2B300FB2EEE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BF4D96C81B3326C300456B61 /* cell */,
 				BF43D26D1B26118700D4B1AC /* controller */,
 				BF43D2691B26109500D4B1AC /* OTPLibs */,
 				BF43D2651B260F9000D4B1AC /* model */,
@@ -438,9 +470,11 @@
 				BF554B591B14F3C500FB2EEE /* bg.png in Resources */,
 				BFB849471B28DA0400214B7B /* logo-120.png in Resources */,
 				BF1B3BDB1B21EABE000BED6B /* produban-logo-.png in Resources */,
+				BF4D96CD1B3326E700456B61 /* OTPTableViewCell.xib in Resources */,
 				BF466A5A1B1646E60004DCFC /* QrCodeViewController.xib in Resources */,
 				BFB849481B28DA0400214B7B /* logo-80.png in Resources */,
 				BF554B351B14F29E00FB2EEE /* Images.xcassets in Resources */,
+				BF4D96C71B33253F00456B61 /* OTPTableViewController.xib in Resources */,
 				BFB849411B28D7BB00214B7B /* logo-40.png in Resources */,
 				BFB8494A1B28DA0400214B7B /* logo-96.png in Resources */,
 				BFB8493C1B28C4B700214B7B /* produban-logo.png in Resources */,
@@ -463,7 +497,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF4D96CC1B3326E700456B61 /* OTPTableViewCell.m in Sources */,
 				BF554B561B14F2DE00FB2EEE /* OtpViewController.m in Sources */,
+				BF4D96C61B33253F00456B61 /* OTPTableViewController.m in Sources */,
 				BF554B301B14F29E00FB2EEE /* AppDelegate.m in Sources */,
 				BF43D26C1B26116C00D4B1AC /* OTPController.m in Sources */,
 				BF554B601B14F64000FB2EEE /* OTPGenerator.m in Sources */,
@@ -601,7 +637,7 @@
 				GCC_PREFIX_HEADER = "OTP-Test/OTP-Test-Prefix.pch";
 				INFOPLIST_FILE = "OTP-Test/OTP-Test-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a00c6f13-36e2-428e-ab32-3819a451ee1c";
+				PROVISIONING_PROFILE = "1eec9375-996d-4429-9677-7017565a9790";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -614,7 +650,7 @@
 				GCC_PREFIX_HEADER = "OTP-Test/OTP-Test-Prefix.pch";
 				INFOPLIST_FILE = "OTP-Test/OTP-Test-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a00c6f13-36e2-428e-ab32-3819a451ee1c";
+				PROVISIONING_PROFILE = "1eec9375-996d-4429-9677-7017565a9790";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
