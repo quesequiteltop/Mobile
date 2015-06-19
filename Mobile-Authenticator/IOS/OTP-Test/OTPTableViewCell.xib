@@ -46,10 +46,31 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="lblClientID" destination="DRp-xY-7ZA" id="0V7-8s-KSo"/>
-                <outlet property="lblIssuer" destination="vjd-sM-Wa7" id="M2g-CY-IUc"/>
+                <outlet property="lblIssuer" destination="vjd-sM-Wa7" id="l0k-7r-S84"/>
                 <outlet property="lblToken" destination="tSC-cm-Olj" id="uvN-rD-jGx"/>
                 <outlet property="progressIndicator" destination="3h0-k0-sWZ" id="JT0-gR-SC9"/>
+                <outlet property="txtClientID" destination="klk-re-c0S" id="78X-Mm-Bef"/>
+                <outlet property="viewEditing" destination="iFS-l1-ACZ" id="s84-OQ-Gd6"/>
             </connections>
         </tableViewCell>
+        <view contentMode="scaleToFill" id="iFS-l1-ACZ">
+            <rect key="frame" x="0.0" y="0.0" width="304" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="* * * * * *" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bkr-gK-egl">
+                    <rect key="frame" x="9" y="0.0" width="159" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="klk-re-c0S">
+                    <rect key="frame" x="9" y="29" width="275" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+        </view>
     </objects>
 </document>

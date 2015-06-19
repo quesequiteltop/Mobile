@@ -17,5 +17,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *lblClientID;
 @property (weak, nonatomic) IBOutlet KAProgressLabel *progressIndicator;
+@property (weak, nonatomic) IBOutlet UIView *viewEditing;
+@property (weak, nonatomic) IBOutlet UITextField *txtClientID;
 
 @end

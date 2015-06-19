@@ -9,13 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "IOTP.h"
 #import "TOTPGenerator.h"
-
+#import "OTP.h"
 @interface OTPGen : NSObject<IOTP>
 
-@property(strong)NSString * secret;
+
 @property(strong) TOTPGenerator *generator;
 
-- (id)initWithSecret:(NSString *)secret;
+
+- (id)initWithSecret:(NSManagedObject *)otpManModel;
 -(NSString *)generateToken;
 
 @end

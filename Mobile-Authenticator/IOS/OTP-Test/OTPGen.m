@@ -11,21 +11,26 @@
 #import "MF_Base32Additions.h"
 
 
+@interface OTPGen()
+@property(strong)OTP * otp;
+
+@end
 
 @implementation OTPGen
 
-static NSInteger digits = 6;
-static  NSInteger period = 30;
+static NSInteger DEFAULT_DIGITS = 6;
+static  NSInteger DEFAULT_PERIOD = 30;
 
 
-- (id)initWithSecret:(NSString *)secret
+- (id)initWithSecret:(NSManagedObject *)otpManModel
 {
     self = [super init];
     if (self) {
-        self.secret = secret;
-        NSData *secretData =  [NSData dataWithBase32String:secret];
+        
+        self.otp = [[OTP alloc]initWithClientID:[otpManModel valueForKey:@"clientID"] AndIssuer:[otpManModel valueForKey:@"issuer"] Algorith:[otpManModel valueForKey:@"algorithm"] AndSecret:[otpManModel valueForKey:@"secret"]];;
+        NSData *secretData =  [NSData dataWithBase32String:self.otp.secret];
 
-        self.generator = [[TOTPGenerator alloc] initWithSecret:secretData algorithm:kOTPGeneratorSHA1Algorithm digits:digits period:period];
+        self.generator = [[TOTPGenerator alloc] initWithSecret:secretData algorithm:kOTPGeneratorSHA1Algorithm digits:DEFAULT_DIGITS period:DEFAULT_PERIOD];
     }
     return self;
 }

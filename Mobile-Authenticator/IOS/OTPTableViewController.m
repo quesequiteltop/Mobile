@@ -9,6 +9,7 @@
 #import "OTPTableViewController.h"
 #import "OTPTableViewCell.h"
 #import "QrCodeViewController.h"
+#import "OTPGen.h"
 
 
 @interface OTPTableViewController ()
@@ -17,7 +18,7 @@
 
 @implementation OTPTableViewController
 
-
+UIBarButtonItem *refreshButton;
 
 - (instancetype)init
 {
@@ -46,7 +47,7 @@
 -(void)setupNavigationController{
     
     //self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(lerCodigo)];
+    refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(lerCodigo)];
     NSMutableArray *buttons = [[NSMutableArray alloc]init];
     [buttons addObject:refreshButton];
     [buttons addObject:self.editButtonItem];
@@ -80,7 +81,25 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 #pragma mark - Table view data source
+
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated
+{
+    [super setEditing:editing animated:animated];
+    [self.tableView setEditing:editing animated:animated];
+    
+    if (editing) {
+        refreshButton.enabled = NO;
+    }else{
+        refreshButton.enabled = YES;
+    }
+    //[[self tableView] reloadData];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -91,9 +110,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
-    // Return the number of rows in the section.
     return [_list count];
+    //return 2;
 }
 
 
@@ -109,8 +127,10 @@
         
     }
     NSManagedObject * otp = [_list objectAtIndex:indexPath.row];
+    OTPGen *generator = [[OTPGen alloc]initWithSecret:otp];
     cell.lblClientID.text = [[otp valueForKey:@"clientID"]stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     cell.lblIssuer.text = [otp valueForKey:@"issuer"];
+    cell.lblToken.text = [generator generateToken];
     
     return cell;
 }

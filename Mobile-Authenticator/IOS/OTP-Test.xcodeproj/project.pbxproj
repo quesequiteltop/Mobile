@@ -11,6 +11,8 @@
 		BF17FB911B2B48D6007D19C2 /* launch_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = BF17FB8F1B2B48D6007D19C2 /* launch_iphone.png */; };
 		BF1B3BDB1B21EABE000BED6B /* produban-logo-.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1B3BD91B21EABE000BED6B /* produban-logo-.png */; };
 		BF1B3BDC1B21EABE000BED6B /* Logo_BancoSantander.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1B3BDA1B21EABE000BED6B /* Logo_BancoSantander.png */; };
+		BF2121A81B3453A100A5D126 /* UIColor+MobileColors.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2121A71B3453A100A5D126 /* UIColor+MobileColors.m */; };
+		BF2121AB1B3453B600A5D126 /* OTPAuthBarClock.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2121AA1B3453B600A5D126 /* OTPAuthBarClock.m */; };
 		BF257C081B175682001FA169 /* TPPropertyAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257C051B175682001FA169 /* TPPropertyAnimation.m */; };
 		BF257C091B175682001FA169 /* KAProgressLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257C071B175682001FA169 /* KAProgressLabel.m */; };
 		BF43D2611B260E1F00D4B1AC /* OTPDao.m in Sources */ = {isa = PBXBuildFile; fileRef = BF43D2601B260E1F00D4B1AC /* OTPDao.m */; };
@@ -75,6 +77,10 @@
 		BF17FB8F1B2B48D6007D19C2 /* launch_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch_iphone.png; sourceTree = "<group>"; };
 		BF1B3BD91B21EABE000BED6B /* produban-logo-.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "produban-logo-.png"; sourceTree = "<group>"; };
 		BF1B3BDA1B21EABE000BED6B /* Logo_BancoSantander.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_BancoSantander.png; sourceTree = "<group>"; };
+		BF2121A61B3453A100A5D126 /* UIColor+MobileColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MobileColors.h"; sourceTree = "<group>"; };
+		BF2121A71B3453A100A5D126 /* UIColor+MobileColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MobileColors.m"; sourceTree = "<group>"; };
+		BF2121A91B3453B600A5D126 /* OTPAuthBarClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPAuthBarClock.h; sourceTree = "<group>"; };
+		BF2121AA1B3453B600A5D126 /* OTPAuthBarClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPAuthBarClock.m; sourceTree = "<group>"; };
 		BF257C041B175682001FA169 /* TPPropertyAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPPropertyAnimation.h; sourceTree = "<group>"; };
 		BF257C051B175682001FA169 /* TPPropertyAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPPropertyAnimation.m; sourceTree = "<group>"; };
 		BF257C061B175682001FA169 /* KAProgressLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAProgressLabel.h; sourceTree = "<group>"; };
@@ -173,6 +179,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF2121A51B34538900A5D126 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				BF2121A91B3453B600A5D126 /* OTPAuthBarClock.h */,
+				BF2121AA1B3453B600A5D126 /* OTPAuthBarClock.m */,
+				BF2121A61B3453A100A5D126 /* UIColor+MobileColors.h */,
+				BF2121A71B3453A100A5D126 /* UIColor+MobileColors.m */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
 		BF257C031B175662001FA169 /* ProgressView */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,6 +388,7 @@
 		BF554B521B14F2B300FB2EEE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BF2121A51B34538900A5D126 /* views */,
 				BF4D96C81B3326C300456B61 /* cell */,
 				BF43D26D1B26118700D4B1AC /* controller */,
 				BF43D2691B26109500D4B1AC /* OTPLibs */,
@@ -498,12 +516,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF4D96CC1B3326E700456B61 /* OTPTableViewCell.m in Sources */,
+				BF2121A81B3453A100A5D126 /* UIColor+MobileColors.m in Sources */,
 				BF554B561B14F2DE00FB2EEE /* OtpViewController.m in Sources */,
 				BF4D96C61B33253F00456B61 /* OTPTableViewController.m in Sources */,
 				BF554B301B14F29E00FB2EEE /* AppDelegate.m in Sources */,
 				BF43D26C1B26116C00D4B1AC /* OTPController.m in Sources */,
 				BF554B601B14F64000FB2EEE /* OTPGenerator.m in Sources */,
 				BF43D2681B260F9F00D4B1AC /* OTP.m in Sources */,
+				BF2121AB1B3453B600A5D126 /* OTPAuthBarClock.m in Sources */,
 				BF43D27E1B26198100D4B1AC /* AGStringEncoding.m in Sources */,
 				BF257C081B175682001FA169 /* TPPropertyAnimation.m in Sources */,
 				BF554B2C1B14F29E00FB2EEE /* main.m in Sources */,
