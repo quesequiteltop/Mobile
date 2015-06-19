@@ -35,6 +35,7 @@ UIBarButtonItem *refreshButton;
     self.title =@"OTP TOKEN";
     [self setupNavigationController];
     [self getLista];
+//    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(getLista) userInfo:nil repeats:YES];
     
 }
 
@@ -56,9 +57,10 @@ UIBarButtonItem *refreshButton;
 }
 
 -(void)getLista{
+
     _list = [_controller getAllOTOP];
     [self.tableView reloadData];
-    
+
 }
 
 - (void)lerCodigo{
@@ -127,10 +129,11 @@ UIBarButtonItem *refreshButton;
         
     }
     NSManagedObject * otp = [_list objectAtIndex:indexPath.row];
-    OTPGen *generator = [[OTPGen alloc]initWithSecret:otp];
+
     cell.lblClientID.text = [[otp valueForKey:@"clientID"]stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     cell.lblIssuer.text = [otp valueForKey:@"issuer"];
-    cell.lblToken.text = [generator generateToken];
+    OTPGen *generator = [[OTPGen alloc]initWithSecret:otp andOTPTableViewCELL:cell];
+    
     
     return cell;
 }

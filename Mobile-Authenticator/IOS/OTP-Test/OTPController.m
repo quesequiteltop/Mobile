@@ -80,6 +80,8 @@ NSString *const OTP_ENTITYNAME=@"OTP";
 -(bool)deleteOTP:(NSManagedObject *)otp{
     context = [appDelegate managedObjectContext];
     [context deleteObject:otp];
+    NSError *error;
+    [context save:&error];
     
     return YES;
 }
