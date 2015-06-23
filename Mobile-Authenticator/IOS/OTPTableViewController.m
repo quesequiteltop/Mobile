@@ -9,6 +9,8 @@
 #import "OTPTableViewController.h"
 #import "OTPTableViewCell.h"
 #import "QrCodeViewController.h"
+#import "FooterTableViewCell.h"
+
 #import "OTPGen.h"
 
 
@@ -137,6 +139,19 @@ UIBarButtonItem *refreshButton;
     
     return cell;
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    OTPTableViewCell *cell = (OTPTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+   [UIPasteboard generalPasteboard].string = cell.lblToken.text;
+    
+    NSString *otpCopiado = [UIPasteboard generalPasteboard].string;
+    
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"OTP-Test" message:[NSString stringWithFormat:@"Token %@ copiado",otpCopiado]  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+    
+}
 
 // The editing style for a row is the kind of button displayed to the left of the cell when in editing mode.
 - (UITableViewCellEditingStyle)tableView:(UITableView *)aTableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -183,4 +198,17 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 {
     return 100;
 }
+
+//-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+//{
+//    return 68.0;
+//}
+//
+//-(UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+//{
+//    // 1. Dequeue the custom header cell
+//    FooterTableViewCell* headerCell = [self.tableView dequeueReusableCellWithIdentifier:@"HeaderCell"];
+//
+//    return headerCell;
+//}
 @end

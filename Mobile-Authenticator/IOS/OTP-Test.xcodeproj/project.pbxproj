@@ -13,6 +13,8 @@
 		BF1B3BDC1B21EABE000BED6B /* Logo_BancoSantander.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1B3BDA1B21EABE000BED6B /* Logo_BancoSantander.png */; };
 		BF2121A81B3453A100A5D126 /* UIColor+MobileColors.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2121A71B3453A100A5D126 /* UIColor+MobileColors.m */; };
 		BF2121AB1B3453B600A5D126 /* OTPAuthBarClock.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2121AA1B3453B600A5D126 /* OTPAuthBarClock.m */; };
+		BF2121AF1B34A9E200A5D126 /* FooterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2121AD1B34A9E200A5D126 /* FooterTableViewCell.m */; };
+		BF2121B01B34A9E200A5D126 /* FooterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF2121AE1B34A9E200A5D126 /* FooterTableViewCell.xib */; };
 		BF257C081B175682001FA169 /* TPPropertyAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257C051B175682001FA169 /* TPPropertyAnimation.m */; };
 		BF257C091B175682001FA169 /* KAProgressLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257C071B175682001FA169 /* KAProgressLabel.m */; };
 		BF43D2611B260E1F00D4B1AC /* OTPDao.m in Sources */ = {isa = PBXBuildFile; fileRef = BF43D2601B260E1F00D4B1AC /* OTPDao.m */; };
@@ -81,6 +83,9 @@
 		BF2121A71B3453A100A5D126 /* UIColor+MobileColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MobileColors.m"; sourceTree = "<group>"; };
 		BF2121A91B3453B600A5D126 /* OTPAuthBarClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPAuthBarClock.h; sourceTree = "<group>"; };
 		BF2121AA1B3453B600A5D126 /* OTPAuthBarClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPAuthBarClock.m; sourceTree = "<group>"; };
+		BF2121AC1B34A9E200A5D126 /* FooterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooterTableViewCell.h; sourceTree = "<group>"; };
+		BF2121AD1B34A9E200A5D126 /* FooterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FooterTableViewCell.m; sourceTree = "<group>"; };
+		BF2121AE1B34A9E200A5D126 /* FooterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FooterTableViewCell.xib; sourceTree = "<group>"; };
 		BF257C041B175682001FA169 /* TPPropertyAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPPropertyAnimation.h; sourceTree = "<group>"; };
 		BF257C051B175682001FA169 /* TPPropertyAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPPropertyAnimation.m; sourceTree = "<group>"; };
 		BF257C061B175682001FA169 /* KAProgressLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAProgressLabel.h; sourceTree = "<group>"; };
@@ -286,6 +291,9 @@
 				BF4D96C91B3326E700456B61 /* OTPTableViewCell.h */,
 				BF4D96CA1B3326E700456B61 /* OTPTableViewCell.m */,
 				BF4D96CB1B3326E700456B61 /* OTPTableViewCell.xib */,
+				BF2121AC1B34A9E200A5D126 /* FooterTableViewCell.h */,
+				BF2121AD1B34A9E200A5D126 /* FooterTableViewCell.m */,
+				BF2121AE1B34A9E200A5D126 /* FooterTableViewCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -480,6 +488,7 @@
 				BF1B3BDC1B21EABE000BED6B /* Logo_BancoSantander.png in Resources */,
 				BF17FB901B2B48D6007D19C2 /* launch_retina.png in Resources */,
 				BF17FB911B2B48D6007D19C2 /* launch_iphone.png in Resources */,
+				BF2121B01B34A9E200A5D126 /* FooterTableViewCell.xib in Resources */,
 				BFB849491B28DA0400214B7B /* logo-58.png in Resources */,
 				BFB849401B28D7BB00214B7B /* logo-60.png in Resources */,
 				BF554B2A1B14F29E00FB2EEE /* InfoPlist.strings in Resources */,
@@ -517,6 +526,7 @@
 			files = (
 				BF4D96CC1B3326E700456B61 /* OTPTableViewCell.m in Sources */,
 				BF2121A81B3453A100A5D126 /* UIColor+MobileColors.m in Sources */,
+				BF2121AF1B34A9E200A5D126 /* FooterTableViewCell.m in Sources */,
 				BF554B561B14F2DE00FB2EEE /* OtpViewController.m in Sources */,
 				BF4D96C61B33253F00456B61 /* OTPTableViewController.m in Sources */,
 				BF554B301B14F29E00FB2EEE /* AppDelegate.m in Sources */,

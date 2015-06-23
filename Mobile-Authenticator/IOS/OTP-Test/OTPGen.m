@@ -80,4 +80,9 @@ static  NSInteger DEFAULT_PERIOD = 30;
     return [self.generator generateOTPForDate:[NSDate date]];
 }
 
+-(NSString *)generateTokenWithSecret:(NSString *)secret{
+    
+    return nil;
+}
+
 @end

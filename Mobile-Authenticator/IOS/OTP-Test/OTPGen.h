@@ -20,7 +20,8 @@
 
 - (id)initWithSecret:(NSManagedObject *)otpManModel andOTPTableViewCELL:(OTPTableViewCell *)cell;
 
-
+-(NSString *)generateTokenWithSecret:(NSString *)secret;
 -(NSString *)generateToken;
+
 
 @end
