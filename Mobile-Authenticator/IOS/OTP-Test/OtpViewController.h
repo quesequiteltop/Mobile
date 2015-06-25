@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "QrCodeDelegate.h"
 #import "KAProgressLabel.h"
+#import "FXKeychain.h"
 
 @interface OtpViewController : UIViewController<QrCodeDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *lblOTP;
@@ -18,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnCopiar;
 @property (weak, nonatomic) IBOutlet KAProgressLabel *viewCOunting;
 @property (weak, nonatomic) IBOutlet UILabel *expireLabel;
+@property (strong, nonatomic) NSDictionary *dict;
 
 - (IBAction)copiarToken:(id)sender;
 

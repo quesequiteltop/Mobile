@@ -32,6 +32,8 @@
 		BF4D96C71B33253F00456B61 /* OTPTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF4D96C51B33253F00456B61 /* OTPTableViewController.xib */; };
 		BF4D96CC1B3326E700456B61 /* OTPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4D96CA1B3326E700456B61 /* OTPTableViewCell.m */; };
 		BF4D96CD1B3326E700456B61 /* OTPTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF4D96CB1B3326E700456B61 /* OTPTableViewCell.xib */; };
+		BF517AA91B3C3E9400C97932 /* FXKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = BF517AA81B3C3E9400C97932 /* FXKeychain.m */; };
+		BF517AAB1B3C3EB100C97932 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF517AAA1B3C3EB100C97932 /* Security.framework */; };
 		BF554B1E1B14F29E00FB2EEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF554B1D1B14F29E00FB2EEE /* Foundation.framework */; };
 		BF554B201B14F29E00FB2EEE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF554B1F1B14F29E00FB2EEE /* CoreGraphics.framework */; };
 		BF554B221B14F29E00FB2EEE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF554B211B14F29E00FB2EEE /* UIKit.framework */; };
@@ -119,6 +121,9 @@
 		BF4D96C91B3326E700456B61 /* OTPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPTableViewCell.h; sourceTree = "<group>"; };
 		BF4D96CA1B3326E700456B61 /* OTPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPTableViewCell.m; sourceTree = "<group>"; };
 		BF4D96CB1B3326E700456B61 /* OTPTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OTPTableViewCell.xib; sourceTree = "<group>"; };
+		BF517AA71B3C3E9400C97932 /* FXKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXKeychain.h; sourceTree = "<group>"; };
+		BF517AA81B3C3E9400C97932 /* FXKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXKeychain.m; sourceTree = "<group>"; };
+		BF517AAA1B3C3EB100C97932 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BF554B1A1B14F29E00FB2EEE /* OTP-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OTP-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF554B1D1B14F29E00FB2EEE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BF554B1F1B14F29E00FB2EEE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -163,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF517AAB1B3C3EB100C97932 /* Security.framework in Frameworks */,
 				BF554B201B14F29E00FB2EEE /* CoreGraphics.framework in Frameworks */,
 				BF554B241B14F29E00FB2EEE /* CoreData.framework in Frameworks */,
 				BF554B221B14F29E00FB2EEE /* UIKit.framework in Frameworks */,
@@ -298,6 +304,15 @@
 			name = cell;
 			sourceTree = "<group>";
 		};
+		BF517AA61B3C3E7300C97932 /* keyChain */ = {
+			isa = PBXGroup;
+			children = (
+				BF517AA71B3C3E9400C97932 /* FXKeychain.h */,
+				BF517AA81B3C3E9400C97932 /* FXKeychain.m */,
+			);
+			name = keyChain;
+			sourceTree = "<group>";
+		};
 		BF554B111B14F29E00FB2EEE = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +336,7 @@
 		BF554B1C1B14F29E00FB2EEE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF517AAA1B3C3EB100C97932 /* Security.framework */,
 				BF554B1D1B14F29E00FB2EEE /* Foundation.framework */,
 				BF554B1F1B14F29E00FB2EEE /* CoreGraphics.framework */,
 				BF554B211B14F29E00FB2EEE /* UIKit.framework */,
@@ -396,6 +412,7 @@
 		BF554B521B14F2B300FB2EEE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BF517AA61B3C3E7300C97932 /* keyChain */,
 				BF2121A51B34538900A5D126 /* views */,
 				BF4D96C81B3326C300456B61 /* cell */,
 				BF43D26D1B26118700D4B1AC /* controller */,
@@ -533,6 +550,7 @@
 				BF43D26C1B26116C00D4B1AC /* OTPController.m in Sources */,
 				BF554B601B14F64000FB2EEE /* OTPGenerator.m in Sources */,
 				BF43D2681B260F9F00D4B1AC /* OTP.m in Sources */,
+				BF517AA91B3C3E9400C97932 /* FXKeychain.m in Sources */,
 				BF2121AB1B3453B600A5D126 /* OTPAuthBarClock.m in Sources */,
 				BF43D27E1B26198100D4B1AC /* AGStringEncoding.m in Sources */,
 				BF257C081B175682001FA169 /* TPPropertyAnimation.m in Sources */,

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "OtpViewController.h"
 #import "OTPTableViewController.h"
+#import "FXKeychain.h"
 
 @implementation AppDelegate
 
@@ -21,8 +22,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    //OtpViewController *vc = [[OtpViewController alloc]init];
-    OTPTableViewController * vc = [[OTPTableViewController alloc]init];
+    OtpViewController *vc = [[OtpViewController alloc]init];
+    //OTPTableViewController * vc = [[OTPTableViewController alloc]init];
     UINavigationController *nvc = [[UINavigationController alloc]initWithRootViewController:vc];
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:204 green:0 blue:0 alpha:1]];
     
@@ -30,6 +31,11 @@
     [nvc.navigationBar
      setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     nvc.navigationBar.translucent = NO;
+    
+    
+    //[[FXKeychain defaultKeychain] removeObjectForKey:@"OTP_KeyChain"];
+    
+    
     [self.window setRootViewController:nvc];
     [self.window makeKeyAndVisible];
     return YES;

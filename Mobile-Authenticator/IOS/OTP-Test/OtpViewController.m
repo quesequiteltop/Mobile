@@ -66,11 +66,12 @@ NSString *const OTPTitleName = @"TOKEN OTP";
 
 - (IBAction)gerarSenha:(id)sender {
     
-    NSDictionary * secretdict =[self getSecret];
-    if (_hasKey) {
+    _dict =[self getSecret];
+    
+    if (_dict) {
         [self showCounter];
         [self setContador];
-        [self generatePIN:secretdict];
+        [self generatePIN:_dict];
     }else{
         [self hideCounter];
     }
@@ -119,13 +120,13 @@ NSString *const OTPTitleName = @"TOKEN OTP";
 
 }
 
-
-
-
 -(BOOL)generatePIN:(NSDictionary *)psecret
 {
-    NSString *secret = [psecret objectForKey:@"secret"];
-    NSString *algorithmdata = [psecret objectForKey:@"algorithm"];
+    NSString *secret=@" ";
+    NSString *algorithmdata=@" ";
+    
+    secret  = [psecret objectForKey:@"secret"];
+    algorithmdata = [psecret objectForKey:@"algorithm"];
     algorithmdata = algorithmdata?algorithmdata:kOTPGeneratorSHA1Algorithm;
     NSString *pin;
     BOOL isvalid = NO;
@@ -176,10 +177,15 @@ NSString *const OTPTitleName = @"TOKEN OTP";
         return nil;
     }
     NSMutableDictionary * dict = [[NSMutableDictionary alloc]init];
-    [dict setObject:otpUrl forKey:@"uri"];
+//    NSString *secret;
+//    NSString *clientID;
+//    NSString *algorithm;
+//    NSString *issuer;
+    
     NSURL *url = [NSURL URLWithString:otpUrl];
     NSString *var = [url query];
     NSArray * array =[var componentsSeparatedByString:@"&"];
+    [dict setObject:otpUrl forKey:@"uri"];
     for (NSString * dado in array) {
         NSArray *partDado = [dado componentsSeparatedByString:@"="];
         [dict setObject:partDado[1] forKey:partDado[0]];
@@ -188,9 +194,9 @@ NSString *const OTPTitleName = @"TOKEN OTP";
     return dict;
 }
 
--(void) saveSecret:(NSDictionary *)secret{
+-(void) saveSecret:(NSDictionary *)psecret{
     
-    if ([self generatePIN:secret]) {
+    if ([self generatePIN:psecret]) {
         NSLog(@"%@",[NSString stringWithFormat:@"Erroooo"]);
     }else{
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Erro" message:@"Codigo invalido" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
@@ -199,20 +205,35 @@ NSString *const OTPTitleName = @"TOKEN OTP";
     }
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    [prefs setObject:[secret objectForKey:@"uri"] forKey:OTPKeyValue];
+    [prefs setObject:[psecret objectForKey:@"uri"] forKey:OTPKeyValue];
+    
+    [FXKeychain defaultKeychain][@"OTP_KeyChain"] = (NSArray *)psecret;
 }
 
 
 -(NSDictionary *)getSecret{
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSString *data =[prefs stringForKey:OTPKeyValue];
+    
     if (data) {
-        _hasKey= YES;
-    }else{
-        _hasKey=NO;
+        _dict = [self otpURItoDictionary:data];
+        [self saveSecret:_dict];
+        [prefs removeObjectForKey:OTPKeyValue];
+        
     }
     
-    return [self otpURItoDictionary:data];
+    
+    NSArray * array = [FXKeychain defaultKeychain][@"OTP_KeyChain"];
+    _dict = (NSDictionary *)array;
+    if (!array) {
+        
+        _dict = (NSDictionary *)array;
+ 
+        return _dict;
+    }
+
+    return _dict;
+    //return [self otpURItoDictionary:data];
 }
 
 -(void)showCounter{
